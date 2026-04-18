@@ -130,10 +130,20 @@ export default function ProjectCard({ project }) {
           fontWeight: 600,
           letterSpacing: '-0.01em',
           color: 'var(--text-primary)',
-          marginBottom: 8,
+          marginBottom: project.description ? 6 : 8,
         }}>
           {project.title}
         </h3>
+        {project.description && (
+          <p style={{
+            fontSize: 13,
+            color: 'var(--text-secondary)',
+            lineHeight: 1.6,
+            marginBottom: 8,
+          }}>
+            {project.description}
+          </p>
+        )}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
           {project.tags.map(tag => (
             <span key={tag} className="tag">{tag}</span>
