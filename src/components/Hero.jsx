@@ -52,9 +52,21 @@ export default function Hero() {
             }}
             className='hero-left'
           >
-
             {/* Name image + tagline (tight group) */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {/* Catchphrase */}
+              <p
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: 12,
+                  color: 'var(--text-tertiary)',
+                  letterSpacing: '0.05em',
+                  margin: 0,
+                }}
+              >
+                Life is a loop. Keep coding.
+              </p>
+
               <h1 style={{ margin: 0, lineHeight: 1 }}>
                 <img
                   src='/images/name-transparent.png'
@@ -79,8 +91,8 @@ export default function Hero() {
                   margin: 0,
                 }}
               >
-                Frontend developer with a passion for crafting clean interfaces
-                and meaningful digital experiences. Based in Tokyo, Japan.
+                Software developer with nearly 4 years of experience in frontend
+                and backend, currently open to new opportunities.
               </p>
             </div>
             {/* end tight group */}
@@ -131,32 +143,97 @@ export default function Hero() {
               >
                 Get in touch
               </a>
+
+              {/* Social icons */}
+              <div>
+                <a
+                  href='https://linkedin.com/in/yurika-sugita/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label='LinkedIn'
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 44,
+                    height: 44,
+                    border: '1px solid var(--border)',
+                    borderRadius: 'var(--radius)',
+                    color: 'var(--text-secondary)',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-hover)';
+                    e.currentTarget.style.color = 'var(--text-primary)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                  }}
+                >
+                  <svg
+                    width='15'
+                    height='15'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  >
+                    <path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' />
+                    <rect x='2' y='9' width='4' height='12' />
+                    <circle cx='4' cy='4' r='2' />
+                  </svg>
+                </a>
+                <a
+                  href='https://github.com/yurikas-dev'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label='GitHub'
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 44,
+                    height: 44,
+                    border: '1px solid var(--border)',
+                    borderRadius: 'var(--radius)',
+                    color: 'var(--text-secondary)',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-hover)';
+                    e.currentTarget.style.color = 'var(--text-primary)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                  }}
+                >
+                  <svg
+                    width='15'
+                    height='15'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  >
+                    <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22' />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
           {/* ── Right column: illustration ── */}
           <div style={{ position: 'relative' }}>
-            {/* Decorative background blob (commented out) */}
-            {/* <div style={{
-              position: 'absolute',
-              inset: '-10%',
-              borderRadius: '60% 40% 55% 45% / 50% 45% 55% 50%',
-              background: 'var(--illust-blob)',
-              filter: 'blur(40px)',
-              opacity: 0.6,
-              pointerEvents: 'none',
-              zIndex: 0,
-            }} /> */}
-
-            {/* Illustration frame — background & border commented out */}
             <div
               style={{
                 position: 'relative',
                 zIndex: 1,
-                /* borderRadius: 24, */
-                /* overflow: 'hidden', */
-                /* background: 'var(--illust-bg)', */
-                /* border: '1px solid var(--border)', */
                 aspectRatio: '1 / 1',
                 display: 'flex',
                 alignItems: 'flex-end',
