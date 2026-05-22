@@ -25,11 +25,12 @@ const condensedSkills = [
       'PostgreSQL',
       'MongoDB',
       'GraphQL',
+      'WordPress',
     ],
   },
   {
     category: 'Tooling',
-    skills: ['Git', 'Docker', 'Figma', 'Storybook'],
+    skills: ['Git', 'Docker', 'Adobe XD', 'Storybook'],
   },
 ];
 

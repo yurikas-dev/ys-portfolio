@@ -55,7 +55,7 @@ export const projects = [
     type: 'Website',
     image: 'images/projects/club-site.png',
     gradient: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)',
-    featured: false,
+    featured: true,
   },
   {
     id: 'guessing-coordinate',
@@ -69,7 +69,7 @@ export const projects = [
     type: 'C# Console App',
     image: 'images/projects/cs-console-game.png',
     gradient: 'linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)',
-    featured: true,
+    featured: false,
   },
   {
     id: 'auto-report-generator',
@@ -129,4 +129,7 @@ export const projects = [
   },
 ];
 
-export const featuredProjects = projects.filter((p) => p.featured);
+const featuredOrder = ['fileconv', 'club-site', 'psychology-notes', 'astraea'];
+export const featuredProjects = featuredOrder.map((id) =>
+  projects.find((p) => p.id === id),
+);

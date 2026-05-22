@@ -36,7 +36,7 @@ export default function Projects() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: 28,
         }} className="projects-grid">
           {featuredProjects.map(project => (
@@ -46,9 +46,6 @@ export default function Projects() {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
-          .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
         @media (max-width: 560px) {
           .projects-grid { grid-template-columns: 1fr !important; }
         }
