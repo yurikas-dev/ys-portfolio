@@ -19,7 +19,7 @@ export const projects = [
     id: 'psychology-notes',
     title: 'Psychology Notes',
     description:
-      'Study notes on Positive Psychology and Performance Psychology in general education at college.',
+      'A bilingual reference site of psychology notes — covering Positive and Performance Psychology from general education at college.',
     tags: ['Astro'],
     github: 'https://github.com/yurikas-dev/psychology-notes',
     demo: 'https://psychology-notes.vercel.app/',
